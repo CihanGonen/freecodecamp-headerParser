@@ -28,7 +28,7 @@ app.get("/api/hello", function (req, res) {
 });
 
 app.get("/api/whoami", function (req, res) {
-  let ip = 'x';
+  const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   console.log(req.socket);
   let language = req.headers['accept-language'];
   let software = req.headers['user-agent'];
