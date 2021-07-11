@@ -32,7 +32,7 @@ app.get("/api/whoami", function (req, res) {
   console.log(req.socket);
   let language = req.headers['accept-language'];
   let software = req.headers['user-agent'];
-  res.json({'ip-adress': ip,'language':language,'software':software});
+  res.json({'ipaddress': ip,'language':language,'software':software});
 });
 
 
